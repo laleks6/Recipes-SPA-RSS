@@ -9,6 +9,10 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background: -webkit-linear-gradient(90deg, #ffffa2, #c2b2d6, #9dd79d);
+  background: linear-gradient(90deg, #ffffa2, #c2b2d6, #9dd79d);
+}
 .main {
   position: relative;
   transition: all 1s;

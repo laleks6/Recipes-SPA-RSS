@@ -18,6 +18,7 @@ function ActiveCard({ resultPromis, index }: TypeProps) {
   useEffect(() => {
     if (!saveData) setSaveData(resultPromis);
     if (!activeBlock) setActiveBlock(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [index]);
   const clickClose = () => {
     setActiveBlock(f);
@@ -41,8 +42,11 @@ function ActiveCard({ resultPromis, index }: TypeProps) {
             <span className="close-icon--title">ClOSE</span>
           </div>
           <div className="active-card">
+            <div className="block-image">
+              {saveData && <img src={saveData.image} alt={saveData.name} />}
+            </div>
+            <div className="definition-line" />
             <div className="first-info">
-              {saveData && <Card data={saveData} index={index} />}
               <ul>
                 <strong> Ingredients</strong>
                 {saveData!.ingredients.map((el) => (

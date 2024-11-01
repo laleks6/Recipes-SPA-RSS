@@ -11,12 +11,17 @@ function LimitCards() {
   };
   return (
     // eslint-disable-next-line jsx-a11y/label-has-associated-control
-    <label>
-      Limit cards:
-      <select value={`${limit}`} onChange={f}>
-        <option value="5">5</option>
-        <option value="10">10</option>
-        <option value="50">All</option>
+    <label className="lable__dropdown">
+      <select className="dropdown" value={`${limit}`} onChange={f}>
+        <option className="dropdown-item" value="5">
+          5
+        </option>
+        <option className="dropdown-item" value="10">
+          10
+        </option>
+        <option className="dropdown-item" value="50">
+          All
+        </option>
       </select>
     </label>
   );

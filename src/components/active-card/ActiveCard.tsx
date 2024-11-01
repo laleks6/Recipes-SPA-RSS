@@ -16,7 +16,7 @@ function ActiveCard({ resultPromis, index }: TypeProps) {
   const [saveData, setSaveData] = useState<Recipe | null>(null);
   const [activeBlock, setActiveBlock] = useState(f);
   useEffect(() => {
-    if (!saveData) setSaveData(resultPromis);
+    setSaveData(resultPromis);
     if (!activeBlock) setActiveBlock(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [index]);
@@ -39,14 +39,11 @@ function ActiveCard({ resultPromis, index }: TypeProps) {
             aria-hidden
           >
             <div className="close-icon__line" />
-            <span className="close-icon--title">ClOSE</span>
           </div>
           <div className="active-card">
-            <div className="block-image">
-              {saveData && <img src={saveData.image} alt={saveData.name} />}
-            </div>
+            {saveData && <Card data={saveData} index={index} />}
             <div className="definition-line" />
-            <div className="first-info">
+            <div className="ingredients">
               <ul>
                 <strong> Ingredients</strong>
                 {saveData!.ingredients.map((el) => (
@@ -55,7 +52,7 @@ function ActiveCard({ resultPromis, index }: TypeProps) {
               </ul>
             </div>
             <div className="definition-line" />
-            <div className="second-info">
+            <div className="instructions">
               <ol>
                 <strong> Instructions</strong>
                 {saveData!.instructions.map((el) => (

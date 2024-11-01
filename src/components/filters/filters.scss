@@ -3,33 +3,85 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  padding-bottom: 40px;
-  transition: all 0.5s ease;
+  width: fit-content;
 }
 
 .filters {
+  position: absolute;
   display: flex;
   justify-content: center;
   width: 100%;
-  padding-bottom: 20px;
+  left: 0;
+  top: 40px;
+  z-index: 2;
+  transition:
+    transform 0.5s ease-out,
+    opacity 0.5s ease-out;
+}
+
+.lable__dropdown {
+  position: relative;
+  display: flex;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 0 4px;
+}
+
+.dropdown {
+  position: relative;
+  width: 50px;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  z-index: 1000;
+  padding: 8px 0;
+  appearance: none;
+  outline: #deb5e4;
+  &:hover {
+    outline: #deb5e4;
+  }
+}
+.dropdown-item {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
 }
 
 .filters__btn {
-  position: absolute;
-  bottom: 20px;
+  position: relative;
   background-color: $btn-color;
   width: 35px;
   height: 35px;
-  border-radius: 50%;
-  z-index: 2;
+  border-radius: 5px;
   &:hover {
     background-color: rgb(141, 113, 141);
   }
+  img {
+    width: 100%;
+  }
 }
 
-.border-button {
-  width: 95%;
-  border-bottom: 1px solid black;
-  padding-bottom: 20px;
+.fade-enter {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+.fade-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.fade-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+.fade-exit-active {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.fade-exit-done {
+  display: none;
 }

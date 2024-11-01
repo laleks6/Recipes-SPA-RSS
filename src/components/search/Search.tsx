@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAppSelector, useAppDispatch } from '../../hook';
 import { setSearch, setActivePage } from '../../store/reduxSlice';
+import iconBtn from '../../assets/loupe.png';
 
 function Search() {
   const [searchValue, setSearchValue] = useState('');
@@ -49,7 +50,7 @@ function Search() {
         className="search__button"
         onClick={onClickSearchBtn}
       >
-        Click
+        <img src={iconBtn} alt="loupe" />
       </button>
     </div>
   );

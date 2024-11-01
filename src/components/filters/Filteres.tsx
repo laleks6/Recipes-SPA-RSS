@@ -5,6 +5,7 @@ import ButtonDropDown from './ButtonDropDown';
 
 function Filters() {
   const [activeBlock, setactiveBlock] = useState(false);
+  console.log(activeBlock, 'activeBlock');
   return (
     <div className="block-filters">
       <CSSTransition in={activeBlock} timeout={500} classNames="fade">

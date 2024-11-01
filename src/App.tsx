@@ -22,9 +22,9 @@ function App() {
     dispatch(fetchData({ valueSearch, limit, activePage }));
   }, [dispatch, activePage, valueSearch, limit]);
   return (
-    <>
+    <main>
       <Header />
-      <div className="main">
+      <section>
         <div className="block-components">
           <ControlPanel />
           <Result />
@@ -37,8 +37,8 @@ function App() {
           />
         )}
         <ErrorBtn />
-      </div>
-    </>
+      </section>
+    </main>
   );
 }
 

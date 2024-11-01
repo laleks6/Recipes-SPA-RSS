@@ -4,7 +4,7 @@ import LimitCards from './LimitCards';
 import ButtonDropDown from './ButtonDropDown';
 
 function Filters() {
-  const [activeBlock, setactiveBlock] = useState(true);
+  const [activeBlock, setactiveBlock] = useState(false);
   return (
     <div className="block-filters">
       <CSSTransition in={activeBlock} timeout={500} classNames="fade">

@@ -18,7 +18,7 @@
 </p>
 
 ## Screenshot:
-![recipes](https://github.com/laleks6/Recipes-SPA-RSS/assets/96025122/0c5826d1-7039-4740-a433-ed2d172b8ead)
+![recipes](https://github.com/user-attachments/assets/2c933e22-d8dd-4ecf-b841-16fe9d4f0911)
 
 
 ## Getting Started
